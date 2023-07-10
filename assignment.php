@@ -99,7 +99,7 @@ class Student {
  $students=[$student1,$student2,$student3];
 
  foreach($students as $key){
-    echo "Name: " .$key->name . "age: " . $key->age . "School: ". $key->school . "<br>";
+    echo "Name: " .$key->name . " Age: " . $key->age . " School: ". $key->school . "<br>";
  }
 
 
