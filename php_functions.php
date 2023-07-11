@@ -120,13 +120,19 @@ foreach ($newList as $element) {
 
 echo "<br> <br>";
 
+
+//Armstrong Number
 function isArmstrongNumber($number) {
     $sum = 0;
     $originalNumber = $number;
 
+
+    $numberAsString = (string) $number;
+    $length = strlen($numberAsString);
+
     while ($number > 0) {
         $digit = $number % 10;
-        $sum += pow($digit, 3);
+        $sum += pow($digit, $length);
         $number = (int)($number / 10);
     }
 
@@ -137,16 +143,9 @@ function isArmstrongNumber($number) {
     }
 }
 
-$number1 = 153;
+$number1 = 8208;
 if (isArmstrongNumber($number1)) {
     echo $number1 . ' is an Armstrong number. <br />';
 } else {
     echo $number1 . ' is not an Armstrong number. <br />';
-}
-
-$number2 = 370;
-if (isArmstrongNumber($number2)) {
-    echo $number2 . ' is an Armstrong number. <br />';
-} else {
-    echo $number2 . ' is not an Armstrong number. <br />';
 }
